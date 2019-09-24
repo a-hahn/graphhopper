@@ -27,7 +27,7 @@ Run a dockerized GraphHopper from sources:
 
 ```bash
 docker build -t a-hahn/graphhopper .
-docker run -d --name graphhopper -v graphhopper-data:/data -p 8989:8989 a-hahn/graphhopper
+docker run -d --name graphhopper --restart always -v graphhopper-data:/data -p 8989:8989 a-hahn/graphhopper
 ```
 
 See also the builds at [Docker Hub](https://hub.docker.com/r/graphhopper/graphhopper)
