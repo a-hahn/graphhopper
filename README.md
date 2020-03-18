@@ -24,15 +24,26 @@ To get started, read through our documentation and install the GraphHopper Web S
 ### Docker
 
 Run a dockerized GraphHopper from sources:
+(Modify `JAVA_TOOL_OPTIONS` if necessary)
 
 ```
-docker build -t a-hahn/graphhopper .
 docker run -d \
+-e JAVA_TOOL_OPTIONS="-Xconcurrentio -Xmx1g -Xms1g" \
 -p 8989:8989 \
 -v graphhopper-data:/data \
 --restart always \
 --name graphhopper \
+docker.pkg.github.com/a-hahn/graphhopper/graphhopper:latest
+
+# or build it and run it
+docker build -t a-hahn/graphhopper .
+sudo docker run -d \
+-e JAVA_TOOL_OPTIONS="-Xconcurrentio -Xmx1g -Xms1g" \
+-p 8989:8989 \
+-v graphhopper-data:/data  \
+--name graphhopper \
 a-hahn/graphhopper
+
 ```
 
 See also the [package](https://github.com/a-hahn/graphhopper/packages) [or the builds at [Docker Hub](https://hub.docker.com/r/graphhopper/graphhopper)]
