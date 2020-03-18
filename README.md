@@ -25,9 +25,14 @@ To get started, read through our documentation and install the GraphHopper Web S
 
 Run a dockerized GraphHopper from sources:
 
-```bash
+```
 docker build -t a-hahn/graphhopper .
-docker run -d --name graphhopper --restart always -v graphhopper-data:/data -p 8989:8989 a-hahn/graphhopper
+docker run -d \
+-p 8989:8989 \
+-v graphhopper-data:/data \
+--restart always \
+--name graphhopper \
+a-hahn/graphhopper
 ```
 
 See also the builds at [Docker Hub](https://hub.docker.com/r/graphhopper/graphhopper)
