@@ -35,7 +35,7 @@ docker run -d \
 a-hahn/graphhopper
 ```
 
-See also the builds at [Docker Hub](https://hub.docker.com/r/graphhopper/graphhopper)
+See also the [package](https://github.com/a-hahn/graphhopper/packages) [or the builds at [Docker Hub](https://hub.docker.com/r/graphhopper/graphhopper)]
 
 ### DEB or RPM package
 
